@@ -30,14 +30,23 @@ PRODUCT_DEVICE := X00T
 PRODUCT_MANUFACTURER := asus
 PRODUCT_NAME := lineage_X00T
 PRODUCT_MODEL := ZenFone Max Pro M1
-
 PRODUCT_GMS_CLIENTID_BASE := android-asus
-
+SAKURA_GAPPS := false
 TARGET_VENDOR := asus
 TARGET_VENDOR_PRODUCT_NAME := X00T
-
+TARGET_BOOT_ANIMATION_RES := 1080
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="coral-user 10 QQ2A.200405.005 6254899 release-keys"
+    PRIVATE_BUILD_DESC="coral-user 10 QQ2A.200305.003 6156912 release-keys"
 
 # Set BUILD_FINGERPRINT variable to be picked up by both system and vendor build.prop
-BUILD_FINGERPRINT := "google/coral/coral:10/QQ2A.200405.005/6254899:user/release-keys"
+BUILD_FINGERPRINT := "google/coral/coral:10/QQ2A.200305.003/6156912:user/release-keys"
+
+# The following system and vendor props will be set by vendor init
+PRODUCT_SYSTEM_PROPERTY_BLACKLIST := \
+    ro.product.name \
+    ro.product.model
+
+PRODUCT_VENDOR_PROPERTY_BLACKLIST := \
+    ro.vendor.product.device \
+    ro.vendor.product.name \
+    ro.vendor.product.model
